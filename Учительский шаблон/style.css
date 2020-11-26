@@ -6,6 +6,7 @@ body{
 	display:grid;
 	grid-template-columns: 1fr;
 	grid-template-rows: 800px 950px 450px 980px 490px 460px;
+	background: #FFFFFF;
 }
 body>img{
 	position: absolute;
@@ -16,7 +17,6 @@ body>img{
 }
 /*---------------------------Header-----------------------------*/
 header{
-	border: 2px solid red;
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	grid-template-rows: 80px 1fr;
@@ -122,7 +122,145 @@ nav>div{
 	background-repeat: no-repeat;
 }
 /*-----------------------------About_us---------------------------*/
+.About_us{
+	display: grid;
+	grid-template-columns:100px 1fr 100px;
+	grid-template-rows: 100px 400px 390px;
+	grid-template-areas: 
+	". ttl ."
+	". abtop ."
+	". abbot abbot"; 
+}
+.About_us_title{
+	grid-area: ttl;
+	display: grid;
+	grid-template-columns: 30px 205px 58	6px 370px;
+	grid-template-rows: 1fr;
+	grid-template-areas: "img wwa bd as";
+	justify-self: center;
+	align-self: center;
+}
+.About_us_title>.icon{
+	width: 30px;
+	height: 30px;
+	align-self: center; 
+	background-image: url(imagenes/vectimg.svg); 
+	background-size: 100% 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.About_us_title>:nth-child(2){
+ 	font-family: Nunito;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 36px;
+	line-height: 49px;
+	text-align: center;
+	color: #3E3F43;
+	padding-top: 20px;
+}
+.line{
+	border: 2px solid #000000;
+	height: 0px;
+	align-self: center;
+}
+.About_us_title>:last-child{
+	font-family: Nunito;
+	font-style: normal;
+	font-weight: 800;
+	font-size: 72px;
+	line-height: 98px;
+	text-align: right;
+
+	color: rgba(34, 34, 34, 0.1);
+}
+.About_us_top{
+	grid-area: abtop;
+	display: grid;
+	grid-template-rows: 1fr 1fr;
+	grid-template-rows:  100px 66px;
+	grid-template-areas: 
+	"kmr wttl"
+	"kmr wtxt";
+	margin-top: 60px;
+}
+.About_us_top>p:first-child{
+	grid-area: wttl;
+	margin-top: 30px;
+	font-family: Nunito;
+	font-style: normal;
+	font-weight: 800;
+	font-size: 36px;
+	line-height: 49px;
+
+	color: #3E3F43;
+}
+.About_us_top>p:last-child{
+	grid-area: wtxt;
+	margin-top: 46px;
+	font-family: Nunito;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 24px;
+	line-height: 33px;
+
+	color: #000000;
+}
+.About_us_top>img{
+	background: url(imagenes/calmarrec.png);
+	background-size: 250px 320px;
+	background-position: left;
+	background-repeat: no-repeat;
+	width: 388px;
+	height: 306px;
+	margin-right: 80px;
+}
+.About_us_bot{
+	grid-area: abbot;
+	display: grid;
+	grid-template-rows: 1fr 1fr;
+	grid-template-rows:  100px 66px;
+	grid-template-areas: 
+	"wttl spn"
+	"wtxt spn"; 
+}
+.About_us_bot>p:first-child{
+	grid-area: wttl;
+	margin-top: 30px;
+	font-family: Nunito;
+	font-style: normal;
+	font-weight: 800;
+	font-size: 36px;
+	line-height: 49px;
+
+	color: #3E3F43;
+}
+.About_us_bot>p:last-child{
+	grid-area: wtxt;
+	margin-top: 46px;
+	font-family: Nunito;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 24px;
+	line-height: 33px;
+
+	color: #000000;
+}
+.About_us_bot>img{
+	background: url(imagenes/spoon.png);
+	background-size: 250px 320px;
+	background-position: left;
+	background-repeat: no-repeat;
+	width: 280px;
+	height: 306px;
+	margin-left: 30%;
+/*	margin-right: 80px;*/
+
+}
 /*------------------------------How_it_works-------------------------*/
+.How_it_works{
+	border: 2px solid red;
+}
 /*---------------------------------Categories---------------------------*/
 /*----------------------------------Testimony------------------------------*/
 /*-------------------------------------Search----------------------------------*/
