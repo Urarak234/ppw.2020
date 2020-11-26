@@ -1,9 +1,66 @@
-/*body{
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
 	display:grid;
 	grid-template-columns: 1fr;
 	grid-template-rows: 800px 950px 450px 980px 490px 460px;
-}*/
+}
 /*---------------------------Header-----------------------------*/
+header{
+	border: 2px solid red;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 80px 1fr;
+	grid-template-areas: 
+	"n n"
+	"txt img";
+}
+header>nav{
+	grid-area: n;
+	border: 2px solid red;
+	display: grid;
+	grid-template-columns: 80px 192px 115px 1fr;
+	grid-template-rows: 36px;
+	grid-template-areas: ". lg . menu";
+	align-content: center;
+}
+nav>div{
+	grid-area: lg;
+	background-image: url(imagenes/logo.png); 
+	background-size: 100% 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+	width: 192px;
+	height: 100%;
+}
+.menu{
+	grid-area: menu;
+	align-content: center;
+	display: grid;
+	grid-template-columns: repeat(6, 1fr);
+	grid-column-gap: 48px;
+	text-align: center;
+}
+.menu>li{
+	display: inline-block;
+	height: 22px;
+}
+#sing_up{
+	margin-right: 28px;
+	border: 1px solid #3E3F43;
+	/*box-sizing: border-box;*/
+	border-radius: 8px;
+	/*justify-content: center;
+	align-content: center;*/
+	padding: 10px; 
+	margin-top: -12px;
+
+}
+#home{
+	color: #DAA520;
+}
 /*-----------------------------About_us---------------------------*/
 /*------------------------------How_it_works-------------------------*/
 /*---------------------------------Categories---------------------------*/
