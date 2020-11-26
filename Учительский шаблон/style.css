@@ -7,6 +7,13 @@ body{
 	grid-template-columns: 1fr;
 	grid-template-rows: 800px 950px 450px 980px 490px 460px;
 }
+body>img{
+	position: absolute;
+	margin-top: 150px;
+	margin-left: 750px;
+	width: 570px;
+	height: 580px;
+}
 /*---------------------------Header-----------------------------*/
 header{
 	border: 2px solid red;
@@ -16,10 +23,12 @@ header{
 	grid-template-areas: 
 	"n n"
 	"txt img";
+	background-image: url(imagenes/rect1.png);
+	background-repeat: no-repeat;
+	background-position: right;
 }
 header>nav{
 	grid-area: n;
-	border: 2px solid red;
 	display: grid;
 	grid-template-columns: 80px 192px 115px 1fr;
 	grid-template-rows: 36px;
@@ -56,10 +65,61 @@ nav>div{
 	align-content: center;*/
 	padding: 10px; 
 	margin-top: -12px;
-
+	background: #F9BDBD;
 }
 #home{
 	color: #DAA520;
+}
+
+.header_content{
+	display: grid;
+	grid-template-columns: 102px 505px 1fr;
+	grid-template-rows: 100px 200px 50px;
+	grid-template-areas: 
+	". txt ."
+	". txtm ."
+	". btn .";
+	grid-row-gap: 16px;
+	margin-top: 140px;
+	/*background-image: url(imagenes/vectimg.svg); 
+	background-size: 100% 100%;
+	background-position: absolute;
+	background-position: right;
+	background-repeat: no-repeat;*/
+}
+.header_content_text_s{
+	grid-area: txt;
+	font-family: Nunito;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 36px;
+	line-height: 49px;
+
+	color: #3E3F43;
+}
+.header_content_text_b{
+	grid-area: txtm;
+	font-family: Nunito;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 72px;
+	line-height: 98px;
+
+	color: #313235;
+}
+.header_content>button{
+	grid-area: btn;
+	width: 175px;
+	height: 50px;
+	background: #DAA520;
+	border-radius: 4px;
+}
+.header_content_img{
+	grid-area: img;
+	background-image: url(imagenes/vectimg.svg); 
+	background-size: 400px 400px;
+	background-position: bottom left;
+	background-repeat: no-repeat;
 }
 /*-----------------------------About_us---------------------------*/
 /*------------------------------How_it_works-------------------------*/
