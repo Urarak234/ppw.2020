@@ -7,7 +7,7 @@
 body{
 	display:grid;
 	grid-template-columns: 1fr;
-	grid-template-rows: 800px 950px 800px 980px 490px 460px;
+	grid-template-rows: 800px 950px 800px 980px 690px 200px;
 	background: #FFFFFF;
 	min-width: 1400px;
 }
@@ -409,6 +409,8 @@ nav>div{
 	grid-template-rows: 400px 400px;
 	grid-gap: 12%;
 	margin-top: 50px;
+	justify-content: center;
+
 
 }
 .Categories_content>div{
@@ -489,9 +491,8 @@ nav>div{
 	grid-template-rows: 100px 1fr;
 	grid-template-areas: 
 	". ttl ."
-	". cat_cont ."; 
+	". test_cont ."; 
 	margin-top: 150px;
-	border: 2px solid red;
 }
 .Testimony_title{
 	grid-area: ttl;
@@ -531,7 +532,74 @@ nav>div{
 
 	color: rgba(34, 34, 34, 0.1);
 }
+.Testimony_content{
+	grid-area: test_cont;
+	display: grid;
+	grid-template-columns: 240px 10% 240px 10% 385px;
+	grid-template-rows: 328px 32px 40px;
+	grid-template-areas: 
+	"til . tir . tic"
+	"ti1 . tir . sl"
+	". . . . dots";
+	justify-content: center;
+	margin-top: 100px;
+}
+.Testimony_content>img:nth-child(2){
+	grid-area: tir;
+}
+.Testimony_content>img:nth-child(3){
+	grid-area: tic;
+}
+.Testimony_content>div{
+	grid-area: sl;
+}
+.Testimony_content>div>p:first-child{
+	display: inline;
+	margin-left: 80%;
+	padding-right: 40px;
+	background-image: url(imagenes/next.png); 
+	background-size: 32px 50%;
+	background-position: 100% 50%;
+	background-repeat: no-repeat;
+
+	font-family: Nunito;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 14px;
+	line-height: 19px;
+
+	color: #3E3F43;
+}
+.Testimony_content>div>p:last-child{
+	margin-top: -20px;
+	padding-left: 40px;
+	background-image: url(imagenes/prev.png); 
+	background-size: 20px 50%;
+	background-position: -0% 50%;
+	background-repeat: no-repeat;
+
+	font-family: Nunito;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 14px;
+	line-height: 19px;
+
+	color: #C4C4C4; 
+}
+
+.Testimony_content>img:nth-child(5){
+	grid-area: dots;
+	justify-self: right;
+}
+
 /*-------------------------------------Search----------------------------------*/
+.search{
+	margin-top: 100px;
+	border: 2px solid red;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 200px;
+}
 /*--------------------------------------Footer--------------------------------*/
 /*--------------------------------misc--------------------------------*/
 button{
