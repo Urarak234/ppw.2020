@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300&display=swap');
 *{
 	margin: 0;
 	padding: 0;
@@ -5,24 +6,18 @@
 body{
 	display:grid;
 	grid-template-columns: 1fr;
-	grid-template-rows: 800px 950px 450px 980px 490px 460px;
+	grid-template-rows: 800px 950px 650px 980px 490px 460px;
 	background: #FFFFFF;
-}
-body>img{
-	position: absolute;
-	margin-top: 150px;
-	margin-left: 750px;
-	width: 570px;
-	height: 580px;
+	min-width: 1400px;
 }
 /*---------------------------Header-----------------------------*/
 header{
 	display: grid;
-	grid-template-columns: 1fr 1fr;
+	grid-template-columns: 1fr 1fr 570px;
 	grid-template-rows: 80px 1fr;
 	grid-template-areas: 
-	"n n"
-	"txt img";
+	"n n n"
+	"txt . img";
 	background-image: url(imagenes/rect1.png);
 	background-repeat: no-repeat;
 	background-position: right;
@@ -30,10 +25,11 @@ header{
 header>nav{
 	grid-area: n;
 	display: grid;
-	grid-template-columns: 80px 192px 115px 1fr;
+	grid-template-columns: 80px 192px 1fr 4fr;
 	grid-template-rows: 36px;
 	grid-template-areas: ". lg . menu";
 	align-content: center;
+	border: 2px solid red;
 }
 nav>div{
 	grid-area: lg;
@@ -55,17 +51,26 @@ nav>div{
 .menu>li{
 	display: inline-block;
 	height: 22px;
+	font-family: Nunito;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 16px;
+	line-height: 22px;
 }
 #sing_up{
 	margin-right: 28px;
 	border: 1px solid #3E3F43;
-	/*box-sizing: border-box;*/
 	border-radius: 8px;
-	/*justify-content: center;
-	align-content: center;*/
 	padding: 10px; 
 	margin-top: -12px;
 	background: #F9BDBD;
+	width: 100px;
+
+	font-family: Nunito;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 16px;
+	line-height: 22px;
 }
 #home{
 	color: #DAA520;
@@ -81,11 +86,6 @@ nav>div{
 	". btn .";
 	grid-row-gap: 16px;
 	margin-top: 140px;
-	/*background-image: url(imagenes/vectimg.svg); 
-	background-size: 100% 100%;
-	background-position: absolute;
-	background-position: right;
-	background-repeat: no-repeat;*/
 }
 .header_content_text_s{
 	grid-area: txt;
@@ -116,6 +116,7 @@ nav>div{
 }
 .header_content_img{
 	grid-area: img;
+	margin-top: 100px;
 	background-image: url(imagenes/vectimg.svg); 
 	background-size: 400px 400px;
 	background-position: bottom left;
@@ -130,11 +131,14 @@ nav>div{
 	". ttl ."
 	". abtop ."
 	". abbot abbot"; 
+	background-image: url(imagenes/vectimg.svg);
+	background-repeat: no-repeat;
+	background-position: -10% 50% ; 
 }
 .About_us_title{
 	grid-area: ttl;
 	display: grid;
-	grid-template-columns: 30px 205px 58	6px 370px;
+	grid-template-columns: 30px 205px 516px 370px;
 	grid-template-rows: 1fr;
 	grid-template-areas: "img wwa bd as";
 	justify-self: center;
@@ -167,10 +171,10 @@ nav>div{
 .About_us_title>:last-child{
 	font-family: Nunito;
 	font-style: normal;
-	font-weight: 800;
 	font-size: 72px;
 	line-height: 98px;
 	text-align: right;
+	font-weight: 800;
 
 	color: rgba(34, 34, 34, 0.1);
 }
@@ -189,10 +193,9 @@ nav>div{
 	margin-top: 30px;
 	font-family: Nunito;
 	font-style: normal;
-	font-weight: 800;
 	font-size: 36px;
 	line-height: 49px;
-
+	width: 448px;
 	color: #3E3F43;
 }
 .About_us_top>p:last-child{
@@ -203,7 +206,7 @@ nav>div{
 	font-weight: 600;
 	font-size: 24px;
 	line-height: 33px;
-
+	width: 448px;
 	color: #000000;
 }
 .About_us_top>img{
@@ -223,45 +226,154 @@ nav>div{
 	grid-template-areas: 
 	"wttl spn"
 	"wtxt spn"; 
+	
 }
 .About_us_bot>p:first-child{
 	grid-area: wttl;
 	margin-top: 30px;
 	font-family: Nunito;
 	font-style: normal;
-	font-weight: 800;
 	font-size: 36px;
 	line-height: 49px;
-
+	width: 650px;
 	color: #3E3F43;
+	margin-top: 100px;
+	margin-left: 10%;
 }
 .About_us_bot>p:last-child{
 	grid-area: wtxt;
 	margin-top: 46px;
 	font-family: Nunito;
 	font-style: normal;
-	font-weight: 600;
 	font-size: 24px;
 	line-height: 33px;
-
+	width: 650px;
 	color: #000000;
+	margin-top: 100px; 
+	margin-left: 10%;
 }
 .About_us_bot>img{
-	background: url(imagenes/spoon.png);
-	background-size: 250px 320px;
-	background-position: left;
-	background-repeat: no-repeat;
-	width: 280px;
-	height: 306px;
-	margin-left: 30%;
-/*	margin-right: 80px;*/
-
+	grid-area: spn;
+	justify-self: right;
 }
 /*------------------------------How_it_works-------------------------*/
 .How_it_works{
+	display: grid;
+	grid-template-columns:100px 1fr 100px;
+	grid-template-rows: 100px 500px;
+	grid-template-areas: 
+	". ttl ."
+	". cntnt ."
+	". btn_htc .";
+
 	border: 2px solid red;
 }
+.How_it_works_title{
+	grid-area: ttl;
+	display: grid;
+	grid-template-columns: 30px 255px 316px 600px;
+	grid-template-rows: 100px;
+	grid-template-areas: "img_htc htc bd as";
+	justify-self: center;
+	align-self: center;
+	text-align: center;
+	border: 2px solid red;
+}
+.How_it_works_title>.icon{
+	grid-area: img_htc;
+	width: 30px;
+	height: 30px;
+	align-self: center; 
+	background-image: url(imagenes/vectimg.svg); 
+	background-size: 100% 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.How_it_works_title>:nth-child(2){
+ 	font-family: Nunito;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 36px;
+	line-height: 49px;
+	color: #3E3F43;
+	border: 2px solid red;
+	justify-self: center;
+	align-self: center;
+
+}
+.How_it_works_title>:last-child{
+	font-family: Nunito;
+	font-style: normal;
+	font-size: 72px;
+	line-height: 98px;
+	text-align: right;
+	justify-self: center;
+	align-self: center;
+	font-weight: 800;
+	color: rgba(34, 34, 34, 0.1);
+	border: 2px solid red;
+}
+.How_it_works_content{
+	grid-area: cntnt;
+	display: grid;
+	grid-template-columns: repeat(4, 238px);
+	grid-template-rows: 180px 50px;
+	grid-column-gap: 5%;
+	border: 2px solid red;
+	align-content: center;
+	justify-content: center;
+}
+
+.How_it_works_content>div{
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	border: 2px solid green;
+	background-position: 12% 55%;
+	background-repeat: no-repeat;
+}
+.How_it_works_content>div:nth-child(1){background-image: url(imagenes/1.png);}
+.How_it_works_content>div:nth-child(2){background-image: url(imagenes/2.png);}
+.How_it_works_content>div:nth-child(3){background-image: url(imagenes/3.png);}
+.How_it_works_content>div:nth-child(4){background-image: url(imagenes/4.png);}
+
+.How_it_works_content>div>img{margin-bottom: 35px;}
+.How_it_works_content>div>p{
+	font-family: Nunito;
+	font-style: normal;
+	font-weight: 800;
+	font-size: 24px;
+	line-height: 33px;
+
+	text-align: center;
+
+	color: #000000;
+}	
+
+.How_it_works>button{
+	 grid-area: btn_htc;
+	 border: 2px solid green;
+	 background: #DAA520;
+	 border-radius: 4px;
+	 width: 212px;
+	 height: 50px;
+	 margin-left: 40%;
+}
 /*---------------------------------Categories---------------------------*/
+
 /*----------------------------------Testimony------------------------------*/
 /*-------------------------------------Search----------------------------------*/
 /*--------------------------------------Footer--------------------------------*/
+/*--------------------------------misc--------------------------------*/
+button{
+	font-family: Nunito;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 16px;
+	line-height: 22px;
+	
+
+	text-align: center;
+
+	color: #FFFFFF;
+}
