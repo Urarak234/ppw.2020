@@ -595,12 +595,53 @@ nav>div{
 /*-------------------------------------Search----------------------------------*/
 .search{
 	margin-top: 100px;
-	border: 2px solid red;
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	grid-template-rows: 200px;
+	grid-column-gap: 35px;
+	background: linear-gradient(180deg, #ededed 0%, rgba(255, 255, 255, 0) 100%);
+
+}
+.search>p{
+	margin-top: 20px;
+	justify-self: right;
+	width: 500px;
+	height: 70px;
+
+	font-family: Nunito;
+	font-style: normal;
+	font-size: 18px;
+	line-height: 25px;
+
+	color: #000000;
+}
+.search>div{
+	justify-self: left;
+	margin-top: 36px;
+}
+.search>div>input{
+	width: 355px;
+	height: 40px;
+
+	background: #FFFFFF;
+	border: 1px solid #DAA520;
+	box-sizing: border-box;
+	border-radius: 4px;
+
+
+}
+.search>div>button{
+	width: 120px;
+	height: 40px;
+
+	background: #DAA520;
+	border-radius: 4px;
+	margin-left: -10px;
 }
 /*--------------------------------------Footer--------------------------------*/
+footer{
+	border: 2px solid red;
+}
 /*--------------------------------misc--------------------------------*/
 button{
 	font-family: Nunito;
