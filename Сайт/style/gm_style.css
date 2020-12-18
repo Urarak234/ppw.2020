@@ -1,0 +1,201 @@
+body{
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: auto auto auto auto;
+	grid-template-areas: 
+	"section section"
+	"fltr fltr"
+	"main main"
+	"footer footer";
+	background: #F3F0F0;
+	min-width: 1200px;
+}
+/*---------------------------------------Filter-----------------------------------*/
+.filter{
+	grid-area: thefltr;
+	display: grid;
+	grid-template-columns: 100px 2fr 100px;
+	grid-template-rows: auto;
+	grid-template-areas: 
+	". fltrsrch fltrbtn";
+	margin: 10px 25px 0px 25px;
+}
+.filter-button{
+	grid-area: fltrbtn;
+	width: 82px;
+	height: 71px;
+	background-image: url(../images/FilterButton.png);
+	background-position: center top;
+	background-repeat: no-repeat;
+	background-size: 100%;
+	border-radius: 23px;
+	border: 1px solid rgba(0, 0, 0, 0.4);
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	justify-self: right; 
+}
+
+.filter-search{
+	grid-area: fltrsrch;
+	height: 0px;
+	width: 98%;
+	border: none;
+	border-radius: 28px;
+	justify-self: right center; 
+	align-self: center;
+	text-align: right;
+	padding-right: 10px;
+	font-size: 20px;
+	background: #F3F0F0;
+	border-bottom: 2px solid black;
+	transition: height 1s;
+	transition-delay: inherit;
+	
+
+}
+.filter-search::-webkit-input-placeholder { text-align:right; }
+.filter-border{
+	display: grid;	
+	grid-area: flborder;
+	border-bottom: 3px solid black;
+	width: 70%;
+	justify-self: center;
+	align-self: center;
+
+}
+/*--------------------------------------News----------------------------------*/
+#mainNews{
+	display:grid;
+	grid-area: main;
+	grid-template-columns: 1fr 1fr;
+	/*grid-template-rows: repeat(10, 1fr);*/
+	grid-template-areas: 
+	"thefltr thefltr"
+	"flborder flborder"
+	"cardl cardr"
+	"cardl cardr";
+	border-radius: 20px;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	margin: 20px 25px 20px 25px;
+	background: #FEFEFE;
+}
+.main_News_content{
+	display: grid;
+	grid-template-columns: 1fr 1px 3fr;
+	grid-template-rows: auto;
+	grid-template-areas: 
+	"im b p";
+	min-height: 220px;
+	background-color: #E8E8E8;
+	border-radius: 10px;
+	margin: 34px 28px;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+#cardl{
+	grid-area: cardl;
+}
+#cardr{
+	grid-area: cardr;
+}
+.main_News_content>img{
+	grid-area: im;
+	width: 90%;
+	min-width: 200px;
+	min-height: 170px;
+	margin: 10px 0px 10px 8px;
+	align-self: center;
+	justify-self: end;
+
+}
+.News{	
+	grid-area: p;
+	margin: 20px;
+}
+.main-text-title{
+	font-family: Rubik Mono One;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 18px;
+	line-height: 23px;
+	margin-bottom: 17px;
+
+	color: #000000;
+}
+.text{
+	font-family: Underdog;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	line-height: 21px;
+	display: flex;
+	align-items: center;
+
+	color: #000000;
+}
+.maincontent-border{
+	grid-area: b;
+	border-left: 3px solid;
+	border-right: 3px solid;
+	filter: blur(3px);
+	margin: 0px;
+}
+.maincontent-border-1{border-color: #31E6FF}
+.maincontent-border-2{border-color: #4313CB}
+.maincontent-border-3{border-color: #1236F2}
+
+/*------------------------------------------Misc---------------------------------------*/
+.looking>img:hover{
+	 
+}
+.menu-button:hover{
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.menu-button-dropdown>li:hover{
+	/*border: 1px solid black;*//
+	background: ;
+	opacity: 0.9;
+}
+.dropdown:focus-within .GG{
+	margin-right: 50px;
+	margin-left: 20px;
+}
+.dropdown:focus-within .menu-button-dropdown>li>a>p{
+	visibility: visible;
+	font-size: 30px;
+	line-height: 27px;
+	margin-top: 30px;
+	margin-right: 0px;
+}
+.dropdown:focus-within .menu-button-dropdown>li{
+	visibility: visible;
+	height: 100%; 
+	margin-top: 23px;
+}
+.dropdown:focus-within .menu-button-dropdown{
+	visibility: visible;
+	height: 140px; 
+}
+.profile>img:hover{
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.profile-avatar>img:hover{
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.filter:focus-within .filter-search{
+	height: 40px;
+	border-bottom: 0px solid black;
+}
+.filter-button:active{
+	/*border: none;*/
+	/*box-shadow: none;*/
+}
+.filter-button:focus{
+	outline:none;
+	box-shadow: none;
+/*	background: red;*/
+}
+.filter-button:hover{
+	opacity: 0.95;
+}
+.filter-search:focus{
+	outline:none;
+}
