@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Rowdies:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+body{
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: auto auto auto auto auto;
+	grid-template-areas: 
+	"section section"
+	"fltr fltr"
+	"main main"
+	"vts vts"
+	"footer footer";
+	background: #F3F0F0;
+	min-width: 1200px;
+}
+/*--------------------------------------FEEDBACK----------------------------------*/
+#feedback{
+	display:grid;
+	grid-area: main;
+	grid-template-columns: 1fr 1fr 1fr;	
+	grid-template-rows: 600px;
+	grid-template-areas: 
+	"flcard flogo frcard";
+	border-radius: 20px;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	margin: 20px 25px 20px 25px;
+	background: #FEFEFE;
+}
+
+.leftcard{
+	grid-area: flcard;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 1fr 3fr 1px 4fr;
+	background-image: url(../images/feedbackbg.png);
+	background-size: 100% 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+	height: 80%;
+	width: 80%;
+	align-self: center;
+	justify-self:center;
+}
+.fcimg-l{
+	background-image: url(../images/avatar.jpg);
+	background-size: 100% 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+	width: 200px;
+	height: 80%;
+	border: 8px solid #B336FF;
+	border-radius: 50%;
+	align-self: center;
+	justify-self: center; 
+}
+
+.leftcard>.fctxt>p:first-child, .leftcard>.fctxt>p:nth-child(2){
+	font-family: Russo One;
+	font-style: normal;
+	font-weight: normal;
+	line-height: 39px;
+}
+.leftcard>.fctxt>p:last-child{
+	font-family: Rowdies;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 17px;
+	line-height: 24px;
+	text-align: center;
+	margin-top: 12px;
+
+}
+.fctitle{
+	justify-self: center;
+	align-self: center;
+	border-bottom: 1px solid #000000;
+
+	font-family: Russo One;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 22px;
+	line-height: 29px;
+
+	text-align: center;
+}
+
+.fctxt{
+	background: white;
+	width: 85%;
+	height: 85%;
+	align-self: center;
+	justify-self: center;
+}
+.fctxt>p{
+	margin: 0px 8px;
+}
+.feedlogo{
+	grid-area: flogo;
+	background-image: url(../images/Site_symbol.png);
+	background-size: 100% 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+	width: 350px;
+	height: 300px;
+	align-self: center;
+	justify-self: center;
+
+}
+.rightcard{
+	grid-area: frcard;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 1fr 3fr 1px 4fr;
+	background-image: url(../images/feedbackbg.png);
+	background-size: 100% 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+	height: 80%;
+	width: 80%;
+	align-self: center;
+	justify-self:center;
+}
+.rightcard>.fctxt>p{
+	font-family: Rowdies;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 17px;
+	line-height: 16px;
+	text-align: center;
+	margin-top: 7%;
+}
+
+.fcimg-r{
+	background-image: url(../images/feedcard.png);
+	background-size: 80% 80%;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.brdr{
+	border-top: 1px solid black;
+	width: 60%;
+	height: 100%;
+	align-self: center;
+	justify-self: center;
+}
+/*------------------------------------------Misc---------------------------------------*/
+.menu-button:hover{
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.menu-button-dropdown>li:hover{
+	opacity: 0.9;
+}
+.dropdown:focus-within .GG{
+	margin-right: 50px;
+	margin-left: 20px;
+}
+.dropdown:focus-within .menu-button-dropdown>li>a>p{
+	visibility: visible;
+	font-size: 30px;
+	line-height: 27px;
+	margin-top: 30px;
+	margin-right: 0px;
+}
+.dropdown:focus-within .menu-button-dropdown>li{
+	visibility: visible;
+	height: 100%; 
+	margin-top: 23px;
+}
+.dropdown:focus-within .menu-button-dropdown{
+	visibility: visible;
+	height: 140px; 
+}
+.profile>img:hover{
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.profile-avatar>img:hover{
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.filter:focus-within .filter-search{
+	height: 40px;
+	border-bottom: 0px solid black;
+}
+.filter-button:active{
+	/*border: none;
+	/*box-shadow: none;*/
+}
+.filter-button:focus{
+	outline:none;
+	box-shadow: none;
+/*	background: red;*/
+}
+.filter-button:hover{
+	opacity: 0.95;
+}
+.filter-search:focus{
+	outline:none;
+}
