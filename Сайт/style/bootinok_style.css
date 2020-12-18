@@ -1,0 +1,134 @@
+
+body{
+	background: #F3F0F0;
+}
+.bgwhite{
+	background: #FFFFFF;
+	margin-top: 20px;
+	border-radius: 20px;
+	padding:0px 30px 30px  30px ;	
+}
+.maincard{
+	background-color: #E8E8E8;
+}
+.btn-outline-none{
+	outline: none;
+	background-image: url(../images/Search.png);
+	background-size: 50px 45px;  
+	background-color: #e6e6e6;
+	background-repeat: no-repeat;
+	background-position: center;
+
+}
+.btn-outline-none:focus-within{
+	outline: none;
+	background-image: url(../images/Searchf.png);
+	background-size: 50px 45px;  
+	background-color: #e6e6e6;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+.row*{
+	margin: 0px;
+	padding: 0px;
+}
+.form-control{
+	margin: 40px 0px;
+	width: 500px;
+}
+.btn{
+	margin-right:50px;
+	margin: 40px 50px 40px 0px;
+}
+.nav>.navbar-brand{
+	align-self: left;
+}
+
+.card{
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	border-radius: 20px;
+}
+div.card{
+	margin-top: 20px;
+}
+.asider{
+	height: 100%;
+}
+.card-body>p, .card-body>h5{
+	margin-top: 20px;
+}
+
+#crd1{
+	height: 800px;
+}
+#crd2{
+	height: 100%;
+}
+#foot{
+	border-radius: 0px;
+	padding-right: 0px;
+}
+
+.row>*{
+	padding-right: 0px;
+}
+#bg{
+	background: grey;
+	color: grey;
+	background-color: grey;
+
+}
+#content{
+	border-radius: 0px;
+	padding-right: 0px;
+}
+
+.maincontent-border-1{
+	border-left: 3px solid;
+	margin: 2px;
+	height: 100%;
+	border-color: #31E6FF}
+
+	.maincontent-border-2{
+	border-left: 3px solid;
+	margin: 2px;
+	height: 100%;
+	border-color: #4313CB}
+
+	.maincontent-border-3{
+	border-left: 3px solid;
+	margin: 2px;
+	height: 100%;
+	border-color: #1236F2}
+
+	.maincontent-border-4{
+		border-left: 3px solid;
+		margin: 2px;
+		height: 100%;
+		border-color: #000000;
+	}
+
+	.menu{
+		border-radius: 0px;
+		background: #FFFFFF;
+	}
+	a#dropdownMenuLink.btn.btn-light{
+		margin: 0px;
+	}
+	#footer{
+		margin-top: 20px;
+	}
+
+	.cardbg{
+		background-image: url(../images/hnBack.png);
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: 100% 100%;
+	}
+	.feedcrd{
+		background-image: url(../images/feedbackbg.png);
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: 100% 100%;
+		border-radius: 0px;	
+	}
